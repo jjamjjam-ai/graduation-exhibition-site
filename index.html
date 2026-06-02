@@ -6,7 +6,7 @@
   <title>2026 Graduation Exhibition — Tourism non Tourism</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -15,15 +15,27 @@
     <nav id="site-nav" class="side-nav" aria-label="주요 메뉴">
       <a href="#home">HOME</a>
       <a href="#celebration">CELEBRATION</a>
-      <a href="#work">WORK</a>
       <a href="#works">WORKS</a>
     </nav>
   </header>
 
   <main>
     <section id="home" class="panel home-panel">
-      <div class="poster-wrap">
-        <img src="assets/images/home-poster.png" alt="2026 Graduation Exhibition 포스터" class="poster-image" />
+      <div class="poster-wrap poster-composed">
+        <div class="poster-bg" aria-hidden="true">
+          <div class="cutout cutout-a"></div>
+          <div class="cutout cutout-b"></div>
+          <div class="circle-main"></div>
+          <div class="circle-ring ring-a"></div>
+          <div class="circle-ring ring-b"></div>
+          <div class="grid-overlay"></div>
+        </div>
+        <div class="poster-text">
+          <p class="poster-kor">전주대학교 건축학과 졸업작품전</p>
+          <p class="poster-eng">Jeonju Univ. Department of Architecture.</p>
+          <p class="poster-year">2026 Graduation Exhibition.</p>
+          <h1>Tourism<br />non Tourism</h1>
+        </div>
       </div>
       <a class="hero-scroll" href="#celebration" aria-label="다음 섹션으로 이동">
         <span>SCROLL</span>
@@ -38,31 +50,8 @@
           <h2>전시의 첫 인상을 이어가는 소개 섹션</h2>
         </div>
         <div>
-          <p>메인 포스터를 그대로 사용해 첫 화면의 인상을 맞췄고, 아래부터는 실제 전시 정보와 이미지 중심으로 확장할 수 있게 열어뒀습니다.</p>
-          <p>원하면 다음엔 이 섹션에도 PDF/배치도 이미지를 그대로 이어붙일 수 있습니다.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="work" class="panel panel-dark">
-      <div class="panel-inner two-column">
-        <div>
-          <p class="section-label">WORK</p>
-          <h2>세 개의 스튜디오가 제시하는 서로 다른 건축적 시선</h2>
-        </div>
-        <div class="studio-list">
-          <article>
-            <h3>LIM YONGMIN STUDIO</h3>
-            <p>제주의 역사·생태·공동체를 잇는 프로젝트를 통해 Tourism / Non Tourism의 경계를 재해석합니다.</p>
-          </article>
-          <article>
-            <h3>LEE CHANGSU STUDIO</h3>
-            <p>현대인의 결핍과 공동체 감각을 제주라는 장소성 속에서 다시 건축적으로 탐구합니다.</p>
-          </article>
-          <article>
-            <h3>YANG MYEONGSEOK STUDIO</h3>
-            <p>보이는 관광 풍경 뒤에 숨은 생태, 노동, 역사, 일상을 드러내는 건축의 역할을 제안합니다.</p>
-          </article>
+          <p>메인 화면은 이미지 텍스트를 빼고 실제 HTML 텍스트로 다시 구성했습니다. 이제 폰트, 줄바꿈, 반응형 조정이 더 쉬워집니다.</p>
+          <p>여기부터는 실제 전시 문구와 사진, 안내 정보로 자연스럽게 이어갈 수 있습니다.</p>
         </div>
       </div>
     </section>
@@ -72,7 +61,7 @@
         <div>
           <p class="section-label">WORKS</p>
           <h2>작품, 배치도, 참여자 정보를 확장할 수 있는 영역</h2>
-          <p>전시배치도 PDF도 같은 방식으로 이미지화해서 바로 이어 붙일 수 있습니다.</p>
+          <p>전시배치도 PDF도 같은 방식으로 이미지화하거나, 필요한 부분만 웹 섹션으로 재구성할 수 있습니다.</p>
         </div>
         <div class="works-grid">
           <div class="work-card"><span>01</span><strong>Exhibition Map</strong></div>
