@@ -22,18 +22,20 @@
 
   <main>
     <section id="home" class="panel hero-panel">
-      <div class="hero-stage">
-        <div class="hero-overlay hero-overlay-a"></div>
-        <div class="hero-overlay hero-overlay-b"></div>
-        <div class="hero-curve"></div>
-        <div class="hero-noise"></div>
-        <div class="hero-copy">
-          <p class="hero-kor">전주대학교 건축학과 졸업작품전</p>
-          <p class="hero-eng">Jeonju Univ. Department of Architecture.</p>
-          <div class="hero-title-block">
-            <p class="hero-year">2026 Graduation Exhibition.</p>
-            <h1>Tourism<br />non Tourism</h1>
-          </div>
+      <div class="hero-poster-frame">
+        <div class="hero-poster-art" aria-hidden="true">
+          <div class="orb orb-a"></div>
+          <div class="orb orb-b"></div>
+          <div class="orb orb-c"></div>
+          <div class="arc arc-a"></div>
+          <div class="arc arc-b"></div>
+          <div class="grain"></div>
+        </div>
+        <div class="hero-poster-copy">
+          <p class="poster-kor">전주대학교 건축학과 졸업작품전</p>
+          <p class="poster-eng">Jeonju Univ. Department of Architecture.</p>
+          <p class="poster-year">2026 Graduation Exhibition.</p>
+          <h1>Tourism<br>non Tourism</h1>
         </div>
         <a class="hero-scroll" href="#celebration" aria-label="다음 섹션으로 이동">
           <span>SCROLL</span>
@@ -49,12 +51,8 @@
           <h2>전시의 첫 인상을 이어가는 소개 섹션</h2>
         </div>
         <div>
-          <p>
-            메인 화면의 포스터적인 인상에서 이어져, 전시의 전체 분위기와 메시지를 부드럽게 전달하는 구간입니다.
-          </p>
-          <p>
-            실제 현장 사진이나 포스터 그래픽이 들어가면 훨씬 완성도가 올라갑니다.
-          </p>
+          <p>메인 포스터의 공기와 흐름을 유지하면서 전시 전체의 메시지를 자연스럽게 소개하는 구간입니다.</p>
+          <p>실제 포스터, 현장 사진, 전시 그래픽이 들어오면 이 영역부터 훨씬 완성도가 높아집니다.</p>
         </div>
       </div>
     </section>
@@ -63,7 +61,7 @@
       <div class="panel-inner two-column">
         <div>
           <p class="section-label">WORK</p>
-          <h2>세 개의 스튜디오가 제시하는 각기 다른 시선</h2>
+          <h2>세 개의 스튜디오가 제시하는 서로 다른 건축적 시선</h2>
         </div>
         <div class="studio-list">
           <article>
@@ -87,9 +85,7 @@
         <div>
           <p class="section-label">WORKS</p>
           <h2>작품, 배치도, 참여자 정보를 확장할 수 있는 영역</h2>
-          <p>
-            전시배치도, 작품 카드, 스튜디오별 프로젝트 링크 등을 이 섹션에 확장해서 넣을 수 있습니다.
-          </p>
+          <p>전시배치도, 작품 카드, 스튜디오별 프로젝트 링크 등을 이 섹션에 확장해서 넣을 수 있습니다.</p>
         </div>
         <div class="works-grid">
           <div class="work-card"><span>01</span><strong>Exhibition Map</strong></div>
@@ -105,13 +101,11 @@
     const menuToggle = document.querySelector('.menu-toggle');
     const sideNav = document.querySelector('.side-nav');
     const navLinks = document.querySelectorAll('.side-nav a');
-
     menuToggle.addEventListener('click', () => {
       const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
       menuToggle.setAttribute('aria-expanded', String(!expanded));
       sideNav.classList.toggle('is-open');
     });
-
     navLinks.forEach((link) => {
       link.addEventListener('click', () => {
         sideNav.classList.remove('is-open');
