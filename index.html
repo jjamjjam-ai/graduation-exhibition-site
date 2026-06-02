@@ -3,18 +3,121 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Graduation Exhibition</title>
+  <title>2026 Graduation Exhibition — Tourism non Tourism</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="container">
-    <p class="eyebrow">2026 Graduation Exhibition</p>
-    <h1>졸업전시 프로젝트</h1>
-    <p class="description">정적 HTML 기반의 졸업전시 소개 페이지입니다. 전시 정보, 참여 작가, 작품 이미지 섹션을 이곳에서 확장할 수 있습니다.</p>
-    <div class="actions">
-      <a href="#" class="button primary">전시 소개</a>
-      <a href="#" class="button">참여 작품</a>
-    </div>
+  <header class="floating-header">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">MENU</button>
+    <nav id="site-nav" class="side-nav" aria-label="주요 메뉴">
+      <a href="#home">HOME</a>
+      <a href="#celebration">CELEBRATION</a>
+      <a href="#work">WORK</a>
+      <a href="#works">WORKS</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="panel panel-home">
+      <div class="panel-inner hero-layout">
+        <div class="hero-copy">
+          <p class="eyebrow">Jeonju Univ. Department of Architecture.</p>
+          <h1>2026 Graduation Exhibition</h1>
+          <p class="hero-title">Tourism<br />non Tourism</p>
+          <p class="description">
+            관광과 비관광의 경계를 다시 읽는 전주대학교 건축학과 졸업전시.
+            보이는 풍경 뒤의 생태, 일상, 역사, 공동체를 건축의 언어로 풀어냅니다.
+          </p>
+        </div>
+        <a class="hero-scroll" href="#celebration" aria-label="다음 섹션으로 이동">
+          <span>SCROLL</span>
+          <span class="arrow">↓</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="celebration" class="panel panel-light">
+      <div class="panel-inner two-column">
+        <div>
+          <p class="section-label">CELEBRATION</p>
+          <h2>전시의 시작을 알리는 장면</h2>
+        </div>
+        <div>
+          <p>
+            이번 졸업전시는 단순한 결과물 전시를 넘어, 장소와 사람, 관광과 생활,
+            풍경과 기억이 충돌하고 공존하는 방식을 함께 보여주는 무대입니다.
+          </p>
+          <p>
+            첫 섹션에서는 전시의 톤과 메시지를 압축적으로 전달하고, 방문자가 전반적인
+            분위기를 한 번에 느낄 수 있도록 구성합니다.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="panel panel-dark">
+      <div class="panel-inner two-column">
+        <div>
+          <p class="section-label">WORK</p>
+          <h2>스튜디오와 주제의 결을 정리하는 섹션</h2>
+        </div>
+        <div class="studio-list">
+          <article>
+            <h3>LIM YONGMIN STUDIO</h3>
+            <p>제주의 역사·생태·공동체를 잇는 프로젝트를 통해 Tourism / Non Tourism의 경계를 재해석합니다.</p>
+          </article>
+          <article>
+            <h3>LEE CHANGSU STUDIO</h3>
+            <p>현대인의 결핍과 공동체 감각을 제주라는 장소성 속에서 다시 건축적으로 탐구합니다.</p>
+          </article>
+          <article>
+            <h3>YANG MYEONGSEOK STUDIO</h3>
+            <p>보이는 관광 풍경 뒤에 숨은 생태, 노동, 역사, 일상을 드러내는 건축의 역할을 제안합니다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="works" class="panel panel-accent">
+      <div class="panel-inner works-grid-wrap">
+        <div>
+          <p class="section-label">WORKS</p>
+          <h2>작품과 전시 정보를 확장할 영역</h2>
+          <p>
+            이 섹션에는 작품 썸네일, 전시 배치도, 참여자 정보, 세부 프로젝트 페이지 링크 등을
+            단계적으로 추가할 수 있습니다.
+          </p>
+        </div>
+        <div class="works-grid">
+          <div class="work-card"><span>01</span><strong>Exhibition Map</strong></div>
+          <div class="work-card"><span>02</span><strong>Studio Archive</strong></div>
+          <div class="work-card"><span>03</span><strong>Project Gallery</strong></div>
+          <div class="work-card"><span>04</span><strong>Credits & Info</strong></div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const sideNav = document.querySelector('.side-nav');
+    const navLinks = document.querySelectorAll('.side-nav a');
+
+    menuToggle.addEventListener('click', () => {
+      const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', String(!expanded));
+      sideNav.classList.toggle('is-open');
+    });
+
+    navLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        sideNav.classList.remove('is-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
 </body>
 </html>
