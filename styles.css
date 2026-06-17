@@ -106,6 +106,8 @@ body { font-family: 'Inter', Pretendard, system-ui, sans-serif; }
 }
 .side-nav.is-open { transform: translateY(0); opacity: 1; pointer-events: auto; }
 .side-nav a { color: #fff; text-decoration: none; font-size: 0.95rem; letter-spacing: 0.08em; }
+.side-nav .sub-links { display: flex; flex-direction: column; gap: 6px; padding-left: 14px; border-left: 1px solid rgba(255,255,255,0.2); margin-top: 2px; }
+.side-nav .sub-links a { font-size: 0.78rem; opacity: 0.7; letter-spacing: 0.05em; }
 @media (max-width: 900px) {
   .floating-header { top: 16px; right: 16px; }
   .panel { padding: 8px; }
