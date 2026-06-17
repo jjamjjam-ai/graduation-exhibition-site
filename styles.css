@@ -24,10 +24,9 @@ main { overflow: hidden; width: 100vw; height: 100vh; }
   width: 72px;
   height: 72px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.92);
-  box-shadow: 0 2px 16px rgba(0,0,0,0.25);
-  border: 1px solid rgba(0,0,0,0.08);
-  border: none;
+  background: #fff;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  border: 1px solid rgba(0,0,0,0.12);
   color: #111;
   font-size: 1.8rem;
   cursor: pointer;
