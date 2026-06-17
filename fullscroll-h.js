@@ -47,14 +47,17 @@
     if (e.key === 'ArrowLeft') goTo(current - 1);
   });
 
-  // 해시로 직접 진입
-  const hash = location.hash;
-  if (hash) {
+  function jumpToHash(hash) {
+    if (!hash) return false;
     const target = document.querySelector(hash);
-    if (target) {
-      const idx = sections.indexOf(target);
-      if (idx !== -1) { current = idx; goTo(idx, false); return; }
-    }
+    if (!target) return false;
+    const idx = sections.indexOf(target);
+    if (idx === -1) return false;
+    goTo(idx, false);
+    return true;
   }
-  goTo(0, false);
+
+  window.addEventListener('hashchange', () => jumpToHash(location.hash));
+
+  if (!jumpToHash(location.hash)) goTo(0, false);
 })();
