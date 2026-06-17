@@ -13,7 +13,7 @@
     wrap.style.transform = `translateX(calc(-${current} * 100vw))`;
     prevBtn.disabled = current === 0;
     nextBtn.disabled = current === sections.length - 1;
-    setTimeout(() => { animating = false; }, 700);
+    setTimeout(() => { animating = false; }, 350);
   }
 
   prevBtn.addEventListener('click', () => goTo(current - 1));
