@@ -13,7 +13,7 @@
     if (index < 0 || index >= sections.length) return;
     current = index;
     animating = true;
-    wrap.style.transform = `translateX(calc(-${current} * 100vw))`;
+    wrap.style.transform = `translateX(${-current * 100}vw)`;
     prevBtn.disabled = current === 0;
     nextBtn.disabled = current === sections.length - 1;
     if (updateHash) history.replaceState(null, '', `#${sections[current].id}`);
