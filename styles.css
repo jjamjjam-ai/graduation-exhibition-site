@@ -12,7 +12,7 @@ body { font-family: 'Inter', Pretendard, system-ui, sans-serif; }
 }
 .image-panel { background: #111; }
 .dark-panel { background: #0b0b0d; }
-.neutral-panel { background: #ece6da; }
+.neutral-panel { background: #fff; }
 .white-panel { background: #fff; }
 .cover-panel { padding: 0; }
 main { overflow: hidden; width: 100vw; height: 100vh; }
