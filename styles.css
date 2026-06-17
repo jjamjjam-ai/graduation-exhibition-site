@@ -29,7 +29,7 @@ body { font-family: 'Inter', Pretendard, system-ui, sans-serif; }
   box-shadow: 0 2px 20px rgba(0,0,0,0.3);
   border: 1px solid rgba(0,0,0,0.12);
   color: #111;
-  font-size: 1.8rem;
+  font-size: min(1.8rem, 2.5vw);
   cursor: pointer;
   z-index: 50;
   display: flex;
