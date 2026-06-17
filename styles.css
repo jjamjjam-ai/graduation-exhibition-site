@@ -17,8 +17,11 @@ body { font-family: 'Inter', Pretendard, system-ui, sans-serif; }
 .v-scroll-wrap { display: flex; flex-direction: column; will-change: transform; transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
 .v-scroll-wrap .panel { flex-shrink: 0; }
 .works-page main { overflow: hidden; width: 100vw; height: 100vh; }
-.h-scroll-wrap { display: flex; flex-direction: row; will-change: transform; transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-.h-scroll-wrap .panel { width: 100vw; flex-shrink: 0; }
+.h-stage { position: relative; width: 100vw; height: 100vh; overflow: hidden; background: #fff; }
+.h-track { display: flex; width: 300vw; height: 100vh; transform: translateX(-100vw); will-change: transform; }
+.h-track.is-animating { transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+.h-track .slide { width: 100vw; height: 100vh; flex-shrink: 0; display: flex; align-items: center; justify-content: center; padding: 12px; }
+.h-track .slide-image { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; box-shadow: 0 24px 60px rgba(0,0,0,0.18); }
 .nav-arrow {
   position: fixed;
   top: calc(50vh - min(36px, 2.5vw));
