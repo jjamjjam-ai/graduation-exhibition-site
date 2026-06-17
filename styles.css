@@ -74,8 +74,8 @@ body { font-family: 'Inter', Pretendard, system-ui, sans-serif; }
 }
 .floating-header {
   position: fixed;
-  top: 24px;
-  right: 24px;
+  top: min(24px, 2vw);
+  right: min(24px, 2vw);
   z-index: 50;
   display: flex;
   flex-direction: column;
@@ -86,8 +86,9 @@ body { font-family: 'Inter', Pretendard, system-ui, sans-serif; }
   border: none;
   background: #111;
   color: #fff;
-  padding: 14px 18px;
+  padding: min(14px, 1.5vw) min(18px, 2vw);
   font: inherit;
+  font-size: min(1rem, 2vw);
   letter-spacing: 0.12em;
   cursor: pointer;
 }
