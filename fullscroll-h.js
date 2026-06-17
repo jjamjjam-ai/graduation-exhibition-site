@@ -6,13 +6,17 @@
   let current = 0;
   let animating = false;
 
-  function goTo(index) {
+  // 각 패널에 ID 자동 부여
+  sections.forEach((s, i) => { if (!s.id) s.id = `page-${i + 1}`; });
+
+  function goTo(index, updateHash = true) {
     if (index < 0 || index >= sections.length) return;
     current = index;
     animating = true;
     wrap.style.transform = `translateX(calc(-${current} * 100vw))`;
     prevBtn.disabled = current === 0;
     nextBtn.disabled = current === sections.length - 1;
+    if (updateHash) history.replaceState(null, '', `#${sections[current].id}`);
     setTimeout(() => { animating = false; }, 350);
   }
 
@@ -43,5 +47,14 @@
     if (e.key === 'ArrowLeft') goTo(current - 1);
   });
 
-  goTo(0);
+  // 해시로 직접 진입
+  const hash = location.hash;
+  if (hash) {
+    const target = document.querySelector(hash);
+    if (target) {
+      const idx = sections.indexOf(target);
+      if (idx !== -1) { current = idx; goTo(idx, false); return; }
+    }
+  }
+  goTo(0, false);
 })();

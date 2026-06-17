@@ -20,6 +20,7 @@
     current = index;
     animating = true;
     sections[current].scrollIntoView({ behavior: 'smooth' });
+    if (sections[current].id) history.replaceState(null, '', `#${sections[current].id}`);
     setTimeout(() => { animating = false; }, 800);
   }
 
