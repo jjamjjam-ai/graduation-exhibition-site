@@ -1,6 +1,6 @@
 :root { --bg: #111; }
 * { box-sizing: border-box; }
-html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; }
+html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #fff; }
 body { font-family: 'Inter', Pretendard, system-ui, sans-serif; background: var(--bg); }
 .panel {
   height: 100vh;
@@ -15,13 +15,12 @@ body { font-family: 'Inter', Pretendard, system-ui, sans-serif; background: var(
 .neutral-panel { background: #ece6da; }
 .white-panel { background: #fff; }
 .cover-panel { padding: 0; }
-main { overflow: hidden; }
+main { overflow: hidden; width: 100vw; height: 100vh; }
 .h-scroll-wrap { display: flex; flex-direction: row; will-change: transform; transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
 .h-scroll-wrap .panel { width: 100vw; flex-shrink: 0; }
 .nav-arrow {
   position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
+  top: calc(50vh - 36px);
   width: 72px;
   height: 72px;
   border-radius: 50%;
