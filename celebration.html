@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2026 Graduation Exhibition — Tourism non Tourism</title>
+  <title>Celebration — 2026 Graduation Exhibition</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap" rel="stylesheet" />
@@ -20,9 +20,26 @@
   </header>
 
   <main>
-    <section class="panel image-panel dark-panel">
-      <img src="assets/source/home.jpg" alt="Home visual" class="panel-image" />
+    <section id="celebration" class="panel image-panel neutral-panel overlay-section">
+      <div class="image-wrap">
+        <img src="assets/source/전시소개.jpg" alt="Celebration visual" class="panel-image" />
+        <div class="top-overlay-buttons" aria-hidden="false">
+          <a href="#celebration" class="overlay-button" aria-label="Celebration 섹션"></a>
+          <a href="#works" class="overlay-button" aria-label="Works 섹션"></a>
+        </div>
+      </div>
     </section>
+
+    <section id="works" class="panel image-panel neutral-panel overlay-section">
+      <div class="image-wrap">
+        <img src="assets/source/전시소개2.jpg" alt="Works visual" class="panel-image" />
+        <div class="top-overlay-buttons" aria-hidden="false">
+          <a href="#celebration" class="overlay-button" aria-label="Celebration 섹션"></a>
+          <a href="#works" class="overlay-button" aria-label="Works 섹션"></a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <script>
@@ -32,6 +49,12 @@
       const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
       menuToggle.setAttribute('aria-expanded', String(!expanded));
       sideNav.classList.toggle('is-open');
+    });
+    document.querySelectorAll('.side-nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        sideNav.classList.remove('is-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
     });
   </script>
   <script src="fullscroll.js"></script>
